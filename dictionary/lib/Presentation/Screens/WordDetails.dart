@@ -3,6 +3,8 @@ import 'package:dictionary/Domain/cubit/apps_cubit.dart';
 import 'package:flutter/material.dart';
 import '../Shared/component.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../Shared/wordInfo.dart';
 //---------------------------------------------
 class WordDetails extends StatelessWidget {
   const WordDetails({Key? key}) : super(key: key);
@@ -32,7 +34,7 @@ class WordDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     detailedTitle(),
-                    wordInfo(),
+                    WordInfo(),
                     storyDesign(),
                     storyBody(),
                   ],

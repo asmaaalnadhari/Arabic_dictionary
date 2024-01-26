@@ -24,9 +24,9 @@ dev_dependencies:
   flutter_bloc:
   font_awesome_flutter :
   sqflite:
-  csv:
   flutter_screenutil:
   flutter_localization:
+  flutter_native_splash:
   path_provider:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

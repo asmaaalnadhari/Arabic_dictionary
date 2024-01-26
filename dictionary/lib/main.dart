@@ -7,6 +7,8 @@ import 'package:dictionary/Presentation/Shared/shared_preferences/shared_prefren
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'Presentation/Screens/game_level.dart';
+
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await CacheData.cacheInitialization();
@@ -39,7 +41,7 @@ class MyApp extends StatelessWidget {
 
     );
 
-    },child:CacheData.getData(key: 'key')??true? const SplashScreen():const AlphabetScreen() ,
+    },child:CacheData.getData(key: 'key')??true? const SplashScreen():const GameLevel() ,
       );
   }
 }

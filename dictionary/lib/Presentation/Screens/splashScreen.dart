@@ -1,5 +1,5 @@
-import 'package:dictionary/Core/Theme_light/Theme_light_colors.dart';
 import 'package:dictionary/Presentation/Screens/Alphabet.dart';
+import 'package:dictionary/Presentation/Screens/game_level.dart';
 import 'package:dictionary/Presentation/Shared/component.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -16,10 +16,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Delay the screen transition for 10 seconds
-    Future.delayed(const Duration(seconds: 20), () {
+    Future.delayed(const Duration(seconds: 7), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const AlphabetScreen()),
+        MaterialPageRoute(builder: (context) => const GameLevel()),
       );
     });
   }
