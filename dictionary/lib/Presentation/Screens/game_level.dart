@@ -7,11 +7,15 @@ import '../../Core/Theme_light/Theme_light_meth.dart';
 import '../../Core/widget/text_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../Shared/shared_preferences/shared_prefrences.dart';
+
 class GameLevel extends StatelessWidget {
   const GameLevel({super.key});
 
   @override
   Widget build(BuildContext context) {
+    CacheData.setData(key: 'key', value: false);
+
     return Scaffold(
         key: scaffoldKey,
         body: Container(
@@ -53,11 +57,11 @@ Widget boxLevel(
       alignment: Alignment.topCenter,
       children: [
         SizedBox(
-          height: 340,
+          height: 360.h,
           child: Container(
             margin:  EdgeInsets.only(top: 20.h),
-            height: 300,
-            width: 270,
+            height: 340.h,
+            width: 250.w,
             decoration: BoxDecoration(
                 image: const DecorationImage(
                   image: AssetImage(
@@ -94,7 +98,7 @@ Widget boxLevel(
                   ),
                   horizontalPadding: 20.w,
                   verticalPadding: 10.h,
-                  buttonWidth: 230.w,
+                  buttonWidth: 210.w,
                   buttonHeight: 50.h,
                   backgroundColor: AppColors.orange,
                   textStyle: const TextStyle(fontWeight: FontWeight.bold),
@@ -111,11 +115,11 @@ Widget boxLevel(
         Positioned(
           left: 160,
           child: AppTextButton(
-            horizontalPadding: 20.h,
-            verticalPadding: 10,
-            buttonWidth: 190,
-            buttonHeight: 50,
-            borderRadius: 16,
+            horizontalPadding: 20.w,
+            verticalPadding: 10.h,
+            buttonWidth: 190.w,
+            buttonHeight: 50.h,
+            borderRadius: 16.r,
             backgroundColor: AppColors.green,
             textStyle: const TextStyle(fontWeight: FontWeight.bold),
             onPressed: () {},
